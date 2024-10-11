@@ -16,7 +16,7 @@ function Calculadora() {
         if (operacion == "multiplicar") { setResultado(parseFloat(number1) * parseFloat(number2)) }
         if (operacion == "dividir") { setResultado(parseFloat(number1) / parseFloat(number2)) }
 
-        fetch(`http://localhost:3500/v1/calculadora/${operacion}`, {
+        fetch(`https://back-calc.vercel.app/v1/calculadora/${operacion}`, {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ number1, number2 })
